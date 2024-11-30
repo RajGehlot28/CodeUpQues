@@ -1,3 +1,7 @@
+/* This is java code to perform following opertaions on string - Append, CountWords, Replace, 
+isPalindrome, Splice, Split, MaxRepeatingCharacter, Sort, Shift, and Reverse. 
+Date Of Creation - 29/11/24 
+Programmer - Raj Gehlot*/
 import java.util.Scanner;
 class stringOperations{
     //This Method Is Used To Append A String
