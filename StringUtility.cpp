@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // This files provides some of string operations like - append, replace character, sort, reverse
 // Name - Raj Gehlot
 // Date - 19/9/25
@@ -244,5 +243,4 @@ int main() {
         if(!doAgain) break;
     }
     return 0;
->>>>>>> 70b53c67bdc0f86cdb0a15287ae8c7d9cf209c9c
 }
