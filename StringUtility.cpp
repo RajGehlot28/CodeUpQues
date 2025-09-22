@@ -35,12 +35,12 @@ string replace(string inputString, char oldChar, char newChar) {
     return inputString;
 }
 string replaceCharacter(string inputString) {
-    char oldChar, newChar;
+    string oldChar, newChar;
     cout << "Enter character to replace: ";
     cin >> oldChar;
     cout << "Enter new character to insert: ";
     cin >> newChar;
-    inputString = replace(inputString, oldChar, newChar);
+    inputString = replace(inputString, oldChar[0], newChar[0]);
     return inputString;
 }
 
@@ -82,7 +82,7 @@ bool selectChoice(string &inputString) {
     cout << "3. Sort characters in string in alphabetical order" << endl;
     cout << "4. Reverse a string" << endl;
     cout << "5. Enter 0 to exit()" << endl;
-    getline(cin, choice);
+    cin >> choice;
 
     if(choice.empty()) return true;
     switch(choice[0]) {
