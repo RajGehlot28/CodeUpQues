@@ -28,19 +28,29 @@ string appendString(string inputString) {
 }
 
 // This function is used to replace all occurance of a character with new character
-string replace(string inputString, char oldChar, char newChar) {
+string replace(string inputString, string oldString, string newString) {
+    int size = inputString.size();
+    string currString = "";
     for(int i = 0; i < inputString.size(); i++) {
-        if(inputString[i] == oldChar) inputString[i] = newChar;
+        string subString = "";
+        for(int j = i; j < i+oldString.size() && j < size; j++) {
+            subString += inputString[j];
+        }
+        if(subString == oldString) {
+            currString += newString;
+            i += oldString.size();
+        }
+        currString += inputString[i];
     }
-    return inputString;
+    return currString;
 }
 string replaceCharacter(string inputString) {
-    string oldChar, newChar;
+    string oldString, newString;
     cout << "Enter character to replace: ";
-    cin >> oldChar;
+    cin >> oldString;
     cout << "Enter new character to insert: ";
-    cin >> newChar;
-    inputString = replace(inputString, oldChar[0], newChar[0]);
+    cin >> newString;
+    inputString = replace(inputString, oldString, newString);
     return inputString;
 }
 
