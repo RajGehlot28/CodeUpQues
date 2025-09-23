@@ -5,13 +5,6 @@
 #include<iostream>
 using namespace std;
 
-// Function to take inputs
-string takeInput() {
-    string inputString;
-    getline(cin, inputString);
-    return inputString;
-}
-
 // This function is used to append new string to existing string
 string append(string inputString, string newString) {
     for(int i = 0; i < newString.size(); i++) {
@@ -22,7 +15,7 @@ string append(string inputString, string newString) {
 string appendString(string inputString) {
     string newString;
     cout << "Enter New String To Append:";
-    newString = takeInput();
+    getline(cin, newString);
     string finalString = append(inputString, newString);
     return finalString;
 }
@@ -39,6 +32,7 @@ string replace(string inputString, string oldString, string newString) {
         if(subString == oldString) {
             currString += newString;
             i += oldString.size();
+            if(i >= size) break;
         }
         currString += inputString[i];
     }
@@ -127,8 +121,9 @@ int main() {
     string inputString = "";
     cout << "Enter a string:";
     getline(cin, inputString);
-    while(true) {
-        bool doAgain = selectChoice(inputString);
+    bool doAgain = true;
+    while(doAgain) {
+        doAgain = selectChoice(inputString);
         if(!doAgain) break;
     }
     return 0;
