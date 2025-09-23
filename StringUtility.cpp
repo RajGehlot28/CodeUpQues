@@ -6,17 +6,11 @@
 using namespace std;
 
 // This function is used to append new string to existing string
-string append(string inputString, string newString) {
-    for(int i = 0; i < newString.size(); i++) {
-        inputString += newString[i];
-    }
-    return inputString;
-}
-string appendString(string inputString) {
+string append(string inputString) {
     string newString;
     cout << "Enter New String To Append:";
     getline(cin, newString);
-    string finalString = append(inputString, newString);
+    string finalString = inputString + newString;
     return finalString;
 }
 
@@ -95,7 +89,7 @@ bool selectChoice(string &inputString) {
             return false;
         break;
         case '1':
-            inputString = appendString(inputString);
+            inputString = append(inputString);
             cout << "Final String after append:" << inputString << endl;
         break;
         case '2':
