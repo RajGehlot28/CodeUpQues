@@ -160,6 +160,7 @@ int sumDigit() {
     }
     return sum;
 }
+
 bool choices() {
     cout << "Enter a choice:" << endl;
     cout << "1. Valid Garanthesis Generator" << endl;
@@ -221,4 +222,5 @@ int main() {
     }
     cout << "Thank You" << endl;
     return 0;
+
 }
