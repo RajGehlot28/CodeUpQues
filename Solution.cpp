@@ -1,4 +1,4 @@
-// This file have solution of week-1 stories
+// This file includes solution of week-1 stories
 // Name - Raj Gehlot
 // Date - 4/11/25
 
@@ -274,3 +274,4 @@ int main() {
     return 0;
 
 }
+
